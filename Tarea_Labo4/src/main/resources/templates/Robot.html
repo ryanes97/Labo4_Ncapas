@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Robot</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<form action="#" th:action="@{/seguridad}" th:object="${robot}" method="post">
+	<div class="form-group row mx-auto" ><span class="border border-0">
+		<div class="col-xs-3">
+			<p class="h2">Eres un Robot >:v ?</p>
+			<input type="radio" th:field="*{soyRobot}" th:value="${false}"> <br>
+			<span th:errors="*{soyRobot}" style= color:#E81505></span><br>
+		</div>
+	</span></div>
+		
+		<input class="btn btn-primary" type="submit" value="Aceptar">
+		<a href="/producto">Regresar</a>
+	
+</form>
+</body>
+</html>
